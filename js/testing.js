@@ -1,5 +1,7 @@
+/****************************************************************
+***** RECURSION *****
+/****************************************************************
 /*
-	***** RECURSION *****
 	- What is recursion?
 		a function that calls itself
 	- How do they work?
@@ -10,7 +12,7 @@
 	- Why use recursion?
 		faster and cleaner when using tree-like structures (i.e binary search trees, mergesort, quicksort, seaching file structures)
 */
-
+/*
 function countDown1(num) {
 	if (num <= 0) {
 		console.log('Done!');
@@ -23,7 +25,6 @@ function countDown1(num) {
 countDown1(3);
 
 
-
 function countDown2(num) {
 	for (let i = num; i > 0; i--) {
 		console.log(i);
@@ -31,12 +32,15 @@ function countDown2(num) {
 	console.log('Done!');
 }
 countDown2(3);
+*/
 
 
+function sumRange(num) {
+	if (num === 1) return 1;
+	return num + sumRange(num-1);
+}
 
-
-
-
+sumRange(3);
 
 
 
