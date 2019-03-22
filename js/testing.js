@@ -34,13 +34,32 @@ function countDown2(num) {
 countDown2(3);
 */
 
-
+/*
 function sumRange(num) {
 	if (num === 1) return 1;
 	return num + sumRange(num-1);
 }
-
 sumRange(3);
+*/
+
+
+function factorial(num) {
+	let total = 1;
+	for (let i = num; i > 0; i--) {
+		total *= i;
+	}
+	return total;
+}
+factorial(5);
+
+
+function factorial(num) {
+	// base case
+	if (num === 1) return 1;
+	// diff input
+	return num * factorial(num-1);
+}
+factorial(5);
 
 
 
@@ -48,6 +67,59 @@ sumRange(3);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function factorial(num) {
+// 	let total = 1;
+// 	for (let i = num; i > 1; i--) {
+// 		total *= i;
+// 	}
+// 	return total;
+// }
+// factorial(5);
+
+
+// function factorial(num) {
+// 	if (num === 1) return 1;
+// 	return num * factorial(num-1)
+// }
+// factorial(4);
+
+
+// factorial(4)
+// 	24
 
 
 
