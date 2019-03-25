@@ -12,6 +12,7 @@
 	- Why use recursion?
 		faster and cleaner when using tree-like structures (i.e binary search trees, mergesort, quicksort, seaching file structures)
 */
+
 /*
 function countDown1(num) {
 	if (num <= 0) {
@@ -24,7 +25,6 @@ function countDown1(num) {
 }
 countDown1(3);
 
-
 function countDown2(num) {
 	for (let i = num; i > 0; i--) {
 		console.log(i);
@@ -33,6 +33,7 @@ function countDown2(num) {
 }
 countDown2(3);
 */
+
 
 /*
 function sumRange(num) {
@@ -43,6 +44,7 @@ sumRange(3);
 */
 
 
+/*
 function factorial(num) {
 	let total = 1;
 	for (let i = num; i > 0; i--) {
@@ -52,7 +54,6 @@ function factorial(num) {
 }
 factorial(5);
 
-
 function factorial(num) {
 	// base case
 	if (num === 1) return 1;
@@ -60,6 +61,31 @@ function factorial(num) {
 	return num * factorial(num-1);
 }
 factorial(5);
+*/
+
+
+/*
+	- What is helper method in recursion?
+		a pattern where we have an outer function which is not recursive which calls an inner function which is recursive
+*/
+function collectOddValues(arr) {
+	let result = [];
+
+	function helper(helperInput) {
+		// base case
+		if (helperInput.length === 0) return;
+		// push odd values into result
+		if (helperInput[0] % 2 !== 0) {
+			result.push(helperInput[0]);
+		}
+		// recursive call w/ diff input
+		helper(helperInput.slice(1));
+	}
+	helper(arr);
+
+	return result;
+}
+collectOddValues([2,5,22,7,9,32,95,4]);
 
 
 
@@ -68,58 +94,6 @@ factorial(5);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function factorial(num) {
-// 	let total = 1;
-// 	for (let i = num; i > 1; i--) {
-// 		total *= i;
-// 	}
-// 	return total;
-// }
-// factorial(5);
-
-
-// function factorial(num) {
-// 	if (num === 1) return 1;
-// 	return num * factorial(num-1)
-// }
-// factorial(4);
-
-
-// factorial(4)
-// 	24
 
 
 
