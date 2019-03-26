@@ -68,6 +68,7 @@ factorial(5);
 	- What is helper method in recursion?
 		a pattern where we have an outer function which is not recursive which calls an inner function which is recursive
 */
+/*
 function collectOddValues(arr) {
 	let result = [];
 
@@ -86,6 +87,72 @@ function collectOddValues(arr) {
 	return result;
 }
 collectOddValues([2,5,22,7,9,32,95,4]);
+*/
+
+
+
+
+
+
+
+function collectOddValues(numArr) {
+	// storage
+	let oddValues = [];
+
+	// base case
+	if (numArr.length === 0) return oddValues;
+	// push odd values into storage
+	if (numArr[0] % 2 !== 0) oddValues.push(numArr[0]);
+
+	// recursive call w/ new input
+	oddValues = oddValues.concat( collectOddValues(numArr.slice(1)) );
+
+	return oddValues;
+}
+collectOddValues([2,5,22,7,9,32,95,4]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
