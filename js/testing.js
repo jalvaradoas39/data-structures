@@ -90,11 +90,7 @@ collectOddValues([2,5,22,7,9,32,95,4]);
 */
 
 
-
-
-
-
-
+/*
 function collectOddValues(numArr) {
 	// storage
 	let oddValues = [];
@@ -110,6 +106,82 @@ function collectOddValues(numArr) {
 	return oddValues;
 }
 collectOddValues([2,5,22,7,9,32,95,4]);
+*/
+
+
+
+
+
+
+
+
+
+/****************************************************************
+***** Linear Search *****
+/****************************************************************
+/*
+	- What is linear seach?
+		a process that checks every element in the list sequentially until the desired element is found.
+	- When use it?
+		1. list is short
+		2. unordered
+	- BigO(worst and best case)
+		worst case: O(n)
+		best case: O(1)
+	- JavaScript functions using some sort of linear search
+		1. indexOf
+		2. includes
+		3. find
+		4. findIndex
+	- How use it?
+		solution
+		callstack (view)
+*/
+
+const states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'
+];
+
+function getIndex(elem, arr) {
+	// force first letter to uppercase
+	const upperCaseElem = elem.charAt(0).toUpperCase() + elem.slice(1);
+
+	for (let i=0; i < arr.length; i++) {
+		// is elem equal current elem in arr
+		if (upperCaseElem === arr[i]) {
+			// found
+			return i;
+		}
+	}
+	// not found
+	return -1;
+}
+
+getIndex('alaska', states);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
